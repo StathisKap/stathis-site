@@ -1,1 +1,1 @@
-<a href="/"><img src="/assets/Logo.svg" alt="Logo" class="w-full" /></a>
+<a href="/"><img src="/static/Logo.svg" alt="Logo" class="w-full bg-slate-100" /></a>

@@ -11,9 +11,7 @@
     	text-lg
         "
 	>
-		<div class="bg-slate-100">
-			<Logo />
-		</div>
+		<Logo />
 		<div class="flex-1">
 			{#each pages as page}
 				<a href="/{page.toLowerCase()}">

@@ -1,2 +1,5 @@
+<script>
+    import Logo from '../Logo.svelte';
+</script>
 <p class="text-lg">My Projects</p>
-<img src="/assets/Logo.svg" alt="Logo" />
+<Logo/>

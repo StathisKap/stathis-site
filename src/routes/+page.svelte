@@ -29,7 +29,7 @@
 					--cursor-color="#d3e5f5"
 					on:done={TypewriterDone}
 				>
-					<td>whoami</td>
+					<td class="font-Menlo">whoami</td>
 				</Typewriter>
 				{#if blink}
 					<td class="animate-blink">▐▌</td>

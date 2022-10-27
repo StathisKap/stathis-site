@@ -416,6 +416,12 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: "Menlo";
+
+  src: url("/static/Menlo-Regular/Menlo-Regular.woff") format('woff');
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -660,6 +666,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.font-Menlo {
+  font-family: Menlo;
 }
 
 .text-lg {
