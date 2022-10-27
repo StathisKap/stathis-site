@@ -1,1 +1,1 @@
-<h1> Contact form</h1>
+<h1>Contact form</h1>
