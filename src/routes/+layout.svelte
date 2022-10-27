@@ -11,9 +11,9 @@
 
 <div class="flex">
 	<div class="w-1/5 min-h-screen">
-		<Sidebar />
+		<Sidebar/>
 	</div>
-	<main class="bg-zinc-900 flex-1 min-h-screen text-slate-300">
+	<main class="bg-zinc-900 flex-1 min-h-screen text-slate-300 pl-10 pt-5">
 		<slot />
 	</main>
 </div>

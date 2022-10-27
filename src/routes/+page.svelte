@@ -1,35 +1,33 @@
 <script lang="ts" defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js">
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Typewriter from 'svelte-typewriter';
 	let visible = false;
 	let blink = false;
-	let interval = 300;
 
 	onMount(async () => {
 		visible = true;
 	});
-
-	function TypewriterDone() {
-		blink = true;
-	}
 </script>
 
 {#if visible}
-	<div transition:fade>
-		<h1>Welcome to SvelteKit</h1>
-		<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+	<h1>Welcome to SvelteKit</h1>
+	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+	<div transition:fade class="text-lg">
+
 		<!--<Mouse_Circle/>  -->
 		<table>
 			<tr>
-				<td data-static>$ </td>
+				<td class="pr-1">$</td>
 				<Typewriter
-					{interval}
-					delay={interval * 3}
+					interval={300}
+					delay={1000}
 					--cursor-color="#d3e5f5"
-					on:done={TypewriterDone}
+					on:done={function () {
+						blink = true;
+					}}
 				>
-					<td class="font-Menlo">whoami</td>
+				<td class="font-Menlo">whoami</td>
 				</Typewriter>
 				{#if blink}
 					<td class="animate-blink">▐▌</td>
@@ -37,4 +35,10 @@
 			</tr>
 		</table>
 	</div>
+{/if}
+
+{#if blink}
+<div transition:fly="{{ y: -20, duration: 1000 }}">
+	<span class="block font-mono text-center text-8xl font-extrabold uppercase pt-10">Stathis Kapnidis</span>
+</div>
 {/if}

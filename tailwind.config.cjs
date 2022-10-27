@@ -16,7 +16,8 @@ module.exports = {
 				}
 			},
 			fontFamily: {
-				Menlo: "Menlo"
+				Menlo: "Menlo",
+				Poppins: "Poppins"
 			},
 		}
 	},
