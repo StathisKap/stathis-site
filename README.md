@@ -6,3 +6,5 @@ This is a site built with svelte, tailwindecss and compiled with vite, that talk
 **This is the dev build**
 The "production" build is at
 [My Site](https://stathis-kapnidis.cf)
+
+Site is hosted on an old laptop running proxomox, on an LXC container.
