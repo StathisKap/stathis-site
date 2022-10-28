@@ -11,8 +11,6 @@
 </script>
 
 {#if visible}
-	<h1>Welcome to SvelteKit</h1>
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 	<div transition:fade class="text-lg">
 
 		<!--<Mouse_Circle/>  -->
@@ -38,7 +36,7 @@
 {/if}
 
 {#if blink}
-<div transition:fly="{{ y: -20, duration: 1000 }}">
+<div transition:fly="{{ y: -40, duration: 1500 }}">
 	<span class="block font-mono text-center text-8xl font-extrabold uppercase pt-10">Stathis Kapnidis</span>
 </div>
 {/if}
