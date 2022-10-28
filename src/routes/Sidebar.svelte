@@ -1,13 +1,19 @@
 <script lang="ts">
+	import { svg_element } from 'svelte/internal';
 	import Logo from './Logo.svelte';
 	let pages: Array<string> = ['Projects', 'Contact'];
+	let links = {
+		'GH.svg': 'https://github.com/StathisKap',
+		'Youtube.svg': 'https://www.youtube.com/channel/UCWKcP-sabZ7XJpHVsqA1Ikg/videos',
+		'THM.svg': 'https://tryhackme.com/p/St.K'
+	};
 </script>
 
 <div class="flex flex-col fixed top-0 left-0 min-h-screen w-1/5 bg-stone-900 m-0 shadow-2xl">
 	<nav
 		class="
         text-center
-      text-gray-100
+      text-slate-200
     	text-lg
         "
 	>
@@ -27,33 +33,17 @@
 			{/each}
 			<div class="h-40" />
 			<div class="flex self-center relative bottom-1/4">
-				<div class="pr-2">
-					<a href="https://github.com/StathisKap">
-						<img
-							src="/GH.svg"
-							alt="https://github.com/StathisKap"
-							class="w-full justify-center h-6 bg-slate-100 rounded-full shadow-2xl border-2 border-neutral-400"
-						/>
-					</a>
-				</div>
-				<div class="pr-2">
-					<a href="https://www.youtube.com/channel/UCWKcP-sabZ7XJpHVsqA1Ikg/videos">
-						<img
-							src="/Youtube.svg"
-							alt="https://www.youtube.com/channel/UCWKcP-sabZ7XJpHVsqA1Ikg/videos"
-							class="w-full justify-center bg-slate-100 h-6 rounded-full border-2 border-neutral-400"
-						/>
-					</a>
-				</div>
-				<div>
-					<a href="https://tryhackme.com/p/St.K">
-						<img
-							src="/THM.svg"
-							alt="https://fontawesomeicons.com/download/saveSvg"
-							class="w-full justify-center bg-slate-100 h-6 rounded-full border-2 border-neutral-400"
-						/>
-					</a>
-				</div>
+				{#each Object.entries(links) as [svg, link]}
+					<div class="pr-2">
+						<a href={link}>
+							<img
+								src="/{svg}"
+								alt={link}
+								class="w-full justify-center h-6 bg-slate-100 rounded-full shadow-2xl border-2 border-neutral-400 hover:border-teal-200 hover:bg-teal-200"
+							/>
+						</a>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</nav>
