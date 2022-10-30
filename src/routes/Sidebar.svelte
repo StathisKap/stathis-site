@@ -9,7 +9,7 @@
 	};
 </script>
 
-<div class="flex flex-col fixed top-0 left-0 min-h-screen w-1/5 bg-stone-900 m-0 shadow-2xl">
+<div class="flex flex-col fixed top-0 left-0 min-h-screen w-40 bg-stone-900 m-0 shadow-2xl">
 	<nav
 		class="
         text-center
