@@ -1,41 +1,31 @@
 <script lang="ts" defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js">
 	import { fade, fly } from 'svelte/transition';
-	import { onMount } from 'svelte';
 	import Typewriter from 'svelte-typewriter';
-	import { transition_in } from 'svelte/internal';
-	let is_mounted = false;
 	let is_blinking = false;
 	let is_subtitle_done = false;
 
-	onMount(async () => {
-		is_mounted = true;
-	});
 </script>
 
-{#if is_mounted}
-	<div in:fade class="text-lg">
-
-		<!-- <Mouse_Circle/>  -->
-		<table>
-			<tr>
-				<td class="pr-1">$</td>
-				<Typewriter
-					interval={300}
-					delay={1000}
-					--cursor-color="#d3e5f5"
-					on:done={function () {
-						is_blinking = true;
-					}}
-				>
-				<td class="font-Menlo">whoami</td>
-				</Typewriter>
-				{#if is_blinking}
-					<td class="animate-blink">▐▌</td>
-				{/if}
-			</tr>
-		</table>
-	</div>
-{/if}
+<div in:fade class="text-lg">
+	<table>
+		<tr>
+			<td class="pr-1">$</td>
+			<Typewriter
+				interval={300}
+				delay={1000}
+				--cursor-color="#d3e5f5"
+				on:done={function () {
+					is_blinking = true;
+				}}
+			>
+			<td class="font-Menlo">whoami</td>
+			</Typewriter>
+			{#if is_blinking}
+				<td class="animate-blink">▐▌</td>
+			{/if}
+		</tr>
+	</table>
+</div>
 
 {#if is_blinking}
 <div in:fly="{{ y: -40, duration: 1500 }}">
@@ -52,5 +42,11 @@
 
 {#if is_subtitle_done}
 	<div transition:fade class="pt-12">
+		<div class="grid grid-cols-2 bg-amber-300 gap-4">
+			<div>A</div>
+			<div>B</div>
+			<div>C</div>
+			<div>D</div>
+		</div>
 	</div>
 {/if}
