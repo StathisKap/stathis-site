@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Menlo";
+        src: url("/Menlo-Regular/Menlo-Regular.woff") format('woff');
+    },
+    @font-face {
+        font-family: "Poppins";
+        src: url("/Poppins/poppins-v20-latin-regular.woff") format('woff');
+    }
+}

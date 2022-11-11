@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Sidebar from './Sidebar.svelte';
-	import { fade } from 'svelte/transition';
-	import Mouse_Circle from './Mouse_Circle.svelte';
 	import { onMount } from 'svelte';
+	import "/src/app.css";
 	export let is_mounted = false;
 
 	onMount(async () => {
@@ -10,11 +9,10 @@
 	});
 </script>
 
-<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
-<link rel="stylesheet" href="./src/output.css" />
 
 <svelte:head>
 	<title>Stathis Kapnidis</title>
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
 </svelte:head>
 
 <div class="flex">
