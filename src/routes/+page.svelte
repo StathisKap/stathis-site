@@ -13,7 +13,6 @@
 			<Typewriter
 				interval={300}
 				delay={1000}
-				keepCursorOnFinish
 				--cursor-color="#d3e5f5"
 				on:done={function () {
 					is_blinking = true;
@@ -42,12 +41,20 @@
 {/if}
 
 {#if is_subtitle_done}
-	<div in:fade class="pt-12">
-		<div class="grid grid-cols-2 bg-amber-300 gap-4">
-			<div>A</div>
-			<div>B</div>
-			<div>C</div>
-			<div>D</div>
-		</div>
+	<div in:fade class="pt-12 text-lg">
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		Mechanical Engineering with Robotics Graduate from the University of Sussex looking for an Engineering or Software Engineering Job.
+ 		Preferably in London.
+ 		I have the right to work in the UK under the EUSS.
+ 		I have Pre-settled Status, and am currently applying for fully settled.
+ 		Fluent in English.
+ 		Fast Learner.
+ 		Very eager to work.
+
+		<hr class="p-12">
+
 	</div>
 {/if}

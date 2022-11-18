@@ -3,7 +3,7 @@
 module.exports = {
 	mode: 'jit',
 	darkMode: 'class',
-	content: ['./src/*.{html,js,svelte,css,ts}'],
+	content: ['./src/**/*.{html,js,svelte,css,ts}'],
 	theme: {
 		extend: {
 			animation: {
