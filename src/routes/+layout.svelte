@@ -13,11 +13,10 @@
 <svelte:head>
 	<title>Stathis Kapnidis</title>
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
-	<link rel="stylesheet" href="/src/output.css">
 </svelte:head>
 
 <div class="flex">
-	<div class="w-40 min-h-screen relative">
+	<div class="w-36 min-h-screen relative">
 		<Sidebar/>
 	</div>
 <!--	{#if is_mounted}
