@@ -13,6 +13,7 @@
 			<Typewriter
 				interval={300}
 				delay={1000}
+				keepCursorOnFinish
 				--cursor-color="#d3e5f5"
 				on:done={function () {
 					is_blinking = true;
@@ -41,7 +42,7 @@
 {/if}
 
 {#if is_subtitle_done}
-	<div transition:fade class="pt-12">
+	<div in:fade class="pt-12">
 		<div class="grid grid-cols-2 bg-amber-300 gap-4">
 			<div>A</div>
 			<div>B</div>
