@@ -18,6 +18,7 @@
 	);
 
 	let size = spring(10);
+
 </script>
 
 <svg

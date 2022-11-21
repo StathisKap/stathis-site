@@ -54,14 +54,17 @@
 
 {#if is_subtitle_done}
 	<div in:fade class="pt-12 text-lg">
-		<hr class="mt-12 mb-12" />
-		<p>
-			&nbsp; &nbsp; &nbsp; &nbsp; Mechanical Engineering with Robotics Graduate from the University
-			of Sussex looking for an Engineering or Software Engineering Job. Preferably in London. I have
-			the right to work in the UK under the EUSS. I have Pre-settled Status, and am currently
-			applying for fully settled. Fluent in English. Fast Learner. Very eager to work.
-		</p>
+		<hr class="mt-12 mb-12"/>
 
+		<div class="flex flex-row">
+<!--			<img src="/Crosswalk3.jpg"  alt="Stathis" class="flex w-1/2 h-1/2"> -->
+			<p class="flex flex-1 p-5 text-center">
+				&nbsp; &nbsp Mechanical Engineering with Robotics Graduate from the University
+				of Sussex looking for an Engineering or Software Engineering Job. Preferably in London. I have
+				the right to work in the UK under the EUSS. I have Pre-settled Status, and am currently
+				applying for fully settled. Fluent in English. Fast Learner. Very eager to work.
+			</p>
+		</div>
 		<hr class="mt-12 mb-12" />
 		<p class="text-xl text-slate-500 text-center">
 			Website is a work in progress.

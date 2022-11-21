@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Logo from './Logo.svelte';
-//	let pages: Array<string> = ['Projects', 'Contact'];
-	let pages: Array<string> = ['Contact'];
+	let pages: Array<string> = ['Projects', 'Contact'];
 	let links = {
 		'GH.svg': 'https://github.com/StathisKap',
 		'Youtube.svg': 'https://www.youtube.com/channel/UCWKcP-sabZ7XJpHVsqA1Ikg/videos',
