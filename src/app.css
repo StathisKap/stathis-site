@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
 @layer base {
     @font-face {
         font-family: "Menlo";
@@ -13,4 +12,3 @@
         src: url("/Poppins/poppins-v20-latin-regular.woff") format('woff');
     }
 }
-*/

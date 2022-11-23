@@ -29,7 +29,8 @@
 {#if is_blinking}
 	<div in:fly={{ y: -40, duration: 1500 }}>
 		<span
-			class="block font-mono text-center text-8xl lg:text-8xl sm:text-5xl font-extrabold uppercase pt-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-fuchsia-800 to-indigo-500"
+			class="block font-mono text-center text-8xl lg:text-8xl sm:text-5xl font-extrabold uppercase pt-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-fuchsia-800 to-indigo-500 animate-pan"
+			style="background-size:200%;"
 			>Stathis Kapnidis</span>
 	</div>
 	<div
