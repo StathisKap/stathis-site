@@ -12,12 +12,13 @@
 	let coords2 = spring(
 		{ x: 0, y: 0 },
 		{
-			stiffness: 0.1,
+			stiffness: 0.15,
 			damping: 0.35
 		}
 	);
 
 	let size = spring(10);
+	let color1  = 'lightgray', color2 = 'darkgray';
 
 </script>
 
@@ -28,17 +29,21 @@
 	}}
 	on:mousedown={(e) => {
 		size.set(30);
+		color1 = "#00f1f1";
+		color2 = "#00f1f1";
 	}}
 	on:mouseup={(e) => {
 		size.set(10);
+		color1 = "lightgray";
+		color2 = "darkgray";
 	}}
 />
 
 <svg
 	class ="w-full h-full"
 >
-	<circle cx={$coords1.x} cy={$coords1.y} r={$size} stroke="lightgray" stroke-width="1" fill-opacity="0"/>
-	<circle cx={$coords2.x} cy={$coords2.y} r={$size/4} fill="darkgray"/>
+	<circle cx={$coords1.x} cy={$coords1.y} r={$size} stroke={color1} stroke-width="1" fill-opacity="0"/>
+	<circle cx={$coords2.x} cy={$coords2.y} r={$size/4} fill={color2}/>
 </svg>
 
 <style>
