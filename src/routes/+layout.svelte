@@ -21,11 +21,11 @@
 	<div class="w-36 min-h-screen relative">
 		<Sidebar/>
 	</div>
-<!--	{#if is_mounted}
-		<div in:fade={{delay: 1000}} class="absolute inset-0 flex justify-center items-center z-10">
+	{#if is_mounted}
+		<div in:fade={{delay: 1000}}>
 			 <Mouse_Circle/> 
 		</div>
-	{/if}  -->
+	{/if} 
 	{#if is_mounted}
 		<main class="bg-zinc-900 flex-1 min-h-screen text-slate-300 pl-10 pr-10 pt-5">
 			<slot />

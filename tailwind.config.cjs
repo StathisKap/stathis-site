@@ -8,7 +8,7 @@ module.exports = {
 		extend: {
 			animation: {
 				blink: 'blink 1s infinite',
-				pan: 'pan 3s linear infinite',
+				pan: 'pan 5s linear infinite',
 			},
 			keyframes: {
 				blink: {
