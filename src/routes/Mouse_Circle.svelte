@@ -12,8 +12,8 @@
 	let coords2 = spring(
 		{ x: 0, y: 0 },
 		{
-			stiffness: 0.15,
-			damping: 0.35
+			stiffness: 0.55,
+			damping: 0.55
 		}
 	);
 
@@ -40,7 +40,7 @@
 />
 
 <svg
-	class ="w-full h-full"
+	class ="w-full min-h-screen"
 >
 	<circle cx={$coords1.x} cy={$coords1.y} r={$size} stroke={color1} stroke-width="1" fill-opacity="0"/>
 	<circle cx={$coords2.x} cy={$coords2.y} r={$size/4} fill={color2}/>

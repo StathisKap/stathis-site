@@ -25,10 +25,9 @@
 		<div in:fade={{delay: 1000}}>
 			 <Mouse_Circle/> 
 		</div>
-	{/if} 
-	{#if is_mounted}
-		<main class="bg-zinc-900 flex-1 min-h-screen text-slate-300 pl-10 pr-10 pt-5">
-			<slot />
+
+		<main class="bg-zinc-900 flex-1 items-stretch min-h-screen text-slate-300 pl-10 pr-10 pt-5">
+			<slot/>
 		</main>
 	{/if}
 </div>

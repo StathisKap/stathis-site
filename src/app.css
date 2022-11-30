@@ -11,7 +11,7 @@
         font-family: "Poppins";
         src: url("/Poppins/poppins-v20-latin-regular.woff") format('woff');
     }
-    input[type=button], a{
+    input[type=button],input[type=text],textarea, a{
         @apply cursor-none;
     }
 }
