@@ -51,13 +51,7 @@
 		cursor: none;
 	}
 	
-	.w-full {
-		width: 100vw;
-	}
-	
-	.h-full {
-		height: 100vw;
-	}
+
 	
 	svg {
 		position: absolute;

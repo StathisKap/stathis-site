@@ -1,7 +1,8 @@
-<script lang="ts" src="https://smtpjs.com/v3/smtp.js">
+<script lang="ts">
+	import { fade } from 'svelte/transition';
 </script>
 
-<div class="sm:w-full lg:pr-44 lg:pl-44 text-slate-200">
+<div in:fade={{delay: 100}} class="sm:w-full lg:pr-44 lg:pl-44 text-slate-200">
 	<h1 class=" text-2xl italic border-2 border-neutral-600 p-2">Contact Form</h1>
 	<form class="grid" action="https://formsubmit.co/7521ddf3e3eb46d2668f8f9b2deeda2a" method="POST">
 		<div>
