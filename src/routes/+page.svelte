@@ -1,6 +1,6 @@
 <script lang="ts" defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js">
 	import { fade, fly } from 'svelte/transition';
-	import { writable } from 'svelte/store'; 
+	import { writable } from 'svelte/store';
 	import Typewriter from 'svelte-typewriter';
 	import { onDestroy } from 'svelte';
 
@@ -11,11 +11,10 @@
 	$: load_content = is_blinking;
 
 	document.addEventListener('keypress', function (event) {
-		if (event.code == "Space"){
+		if (event.code == 'Space') {
 			load_content = true;
 		}
 	});
-
 </script>
 
 <div in:fade class="text-lg">
@@ -25,7 +24,7 @@
 			<Typewriter
 				interval={300}
 				delay={1000}
-				--cursor-color=#cbd5e1
+				--cursor-color="#cbd5e1"
 				on:done={function () {
 					is_blinking = true;
 				}}
@@ -67,7 +66,7 @@
 
 {#if is_subtitle_done}
 	<div in:fade class="pt-12 text-lg">
-		<hr class="mt-12 mb-12" />
+	<hr class="mt-12 mb-12" />
 
 		<div class="flex flex-row">
 			<!--			<img src="/Crosswalk3.jpg"  alt="Stathis" class="flex w-1/2 h-1/2"> -->
@@ -78,6 +77,20 @@
 				for fully settled. Fluent in English. Fast Learner. Very eager to work.
 			</p>
 		</div>
+		<div class="flex flex-row justify-center items-center pt-5">
+			<a href="/contact">
+				<button
+					class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium group bg-gradient-to-br from-indigo-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-slate-200 focus:ring-4 focus:outline-none  focus:ring-fuchsia-800 hover:animate-pan"
+				>
+					<span
+						class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0"
+					>
+						Contact Me!!
+					</span>
+				</button>
+			</a>
+		</div>
+	
 		<hr class="mt-12 mb-12" />
 		<p class="text-xl text-slate-500 text-center">
 			Website is a work in progress. It is being developed with Svelte, Typescript, and Tailwind. It
