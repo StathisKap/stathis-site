@@ -4,13 +4,11 @@
 	import Typewriter from 'svelte-typewriter';
 	import { onDestroy } from 'svelte';
 
-	let is_blinking = writable(false);
-	let load_content = $is_blinking;
+	let is_blinking = false;
+	let load_content = false;
 	let is_subtitle_done = false;
 
-	const unsubscribe = is_blinking.subscribe(value => {
-		load_content = value;
-	})
+	$: load_content = is_blinking;
 
 	document.addEventListener('keypress', function (event) {
 		if (event.code == "Space"){
@@ -18,7 +16,6 @@
 		}
 	});
 
-	onDestroy(unsubscribe);
 </script>
 
 <div in:fade class="text-lg">
@@ -28,9 +25,9 @@
 			<Typewriter
 				interval={300}
 				delay={1000}
-				cursor={false}
+				--cursor-color=#cbd5e1
 				on:done={function () {
-					is_blinking.set(true);
+					is_blinking = true;
 				}}
 			>
 				<td class="font-Menlo">whoami</td>
