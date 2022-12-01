@@ -40,7 +40,7 @@
 />
 
 <svg
-	class ="w-full min-h-screen"
+	class ="w-full min-h-screen z-50"
 >
 	<circle cx={$coords1.x} cy={$coords1.y} r={$size} stroke={color1} stroke-width="1" fill-opacity="0"/>
 	<circle cx={$coords2.x} cy={$coords2.y} r={$size/4} fill={color2}/>
