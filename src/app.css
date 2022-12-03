@@ -14,4 +14,7 @@
     input[type=button],input[type=text],textarea, button, input[type=submit], a{
         @apply cursor-none;
     }
+    body{
+         background-color: rgb(24 24 27)
+    }
 }
