@@ -4,7 +4,8 @@
 	import Mouse_Circle from './Mouse_Circle.svelte';
 	import { onMount } from 'svelte';
 	import "../app.css";
-	export let is_mounted = false;
+	let is_mounted = false;
+
 
 	onMount(async () => {
 		is_mounted = true;

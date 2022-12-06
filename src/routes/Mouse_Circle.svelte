@@ -40,23 +40,8 @@
 />
 
 <svg
-	class ="w-full min-h-screen z-50"
+	class ="w-full min-h-screen z-50 pointer-events-none top-0 left-0 absolute"
 >
 	<circle cx={$coords1.x} cy={$coords1.y} r={$size} stroke={color1} stroke-width="1" fill-opacity="0"/>
 	<circle cx={$coords2.x} cy={$coords2.y} r={$size/4} fill={color2}/>
 </svg>
-
-<style>
-	:global(body) {
-		cursor: none;
-	}
-	
-
-	
-	svg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		pointer-events: none;
-	}
-</style>
