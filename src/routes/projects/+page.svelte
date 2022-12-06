@@ -1,36 +1,27 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import { hover } from "./hover.ts"
 
-	function handleMouse(e:MouseEvent) {
-		for (const card of document.getElementsByClassName("card") as HTMLCollectionOf<HTMLElement>){
-			const rect = card.getBoundingClientRect(),
-				x = e.clientX - rect.left,
-				y = e.clientY - rect.top;
-			
-			card.style.setProperty("--mouse-x", `$(x)px`);
-			card.style.setProperty("--mouse-y", `$(y)px`);
-		}
-	}
+	let slugs = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"];
+
 </script>
-
 
 <div
 	in:fade={{ delay: 100 }}
 	class="flex flex-wrap gap-3 max-w-full w-auto justify-center items-center"
+	use:hover
 >
-	<div class="h-64 w-80 bg-zinc-900 border-2 border-white border-opacity-10 cursor-none relative card" />
-	<div class="h-64 w-80 bg-zinc-900 border-2 border-white border-opacity-10 cursor-none relative card" />
-	<div class="h-64 w-80 bg-zinc-900 border-2 border-white border-opacity-10 cursor-none relative card" />
-	<div class="h-64 w-80 bg-zinc-900 border-2 border-white border-opacity-10 cursor-none relative card" />
-	<div class="h-64 w-80 bg-zinc-900 border-2 border-white border-opacity-10 cursor-none relative card" />
-	<div class="h-64 w-80 bg-zinc-900 border-2 border-white border-opacity-10 cursor-none relative card" />
+	{#each slugs as slug, index}
+		<div class="h-64 w-80 bg-zinc-900 border-2 border-white border-opacity-10 cursor-none relative card">
+			{index} - {slug}
+		</div>
+	{/each}
 </div>
 
 <style>
 	.card::before {
 		background: radial-gradient(
-/*			800px circle at var(--mouse-x) var(--mouse-y), */
-			800px circle at 100px 100px,
+		800px circle at var(--mouse-x) var(--mouse-y),
 			rgba(255, 255, 255, 0.1),
 			transparent 40%
 		);
