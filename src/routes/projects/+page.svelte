@@ -12,13 +12,20 @@
 	use:hover
 >
 	{#each slugs as slug, index}
-		<div class="h-64 w-80 bg-zinc-900 border-2 border-white border-opacity-10 cursor-none relative card">
-			{index} - {slug}
+		<div class="h-64 w-80 bg-white bg-opacity-10 rounded-lg cursor-none relative card">
+			<div class="card-content bg-zinc-900 p-1">
+				{index} - {slug}
+			</div>
 		</div>
 	{/each}
 </div>
 
 <style>
+
+	.card:hover::before {
+		opacity: 1;
+	}
+
 	.card::before {
 		background: radial-gradient(
 		800px circle at var(--mouse-x) var(--mouse-y),
@@ -31,7 +38,18 @@
 		top: 0px;
 		position: absolute;
 		content: '';
+		opacity: 0;
+		transition: opacity 500ms;
 		border-radius: inherit;
 		z-index: 2;
 	}
+
+
+	.card > .card-content {
+		border-radius: inherit;
+		margin: 1px;
+		height: calc(100% - 2px);
+		width: calc(100% - 2px);
+	}
+
 </style>
