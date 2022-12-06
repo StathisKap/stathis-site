@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { hover } from './hover';
 
-	let projects = ['Blasteroids', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth'];
+	let projects = ['Blasteroids', 'PathFinder', 'Third', 'Fourth', 'Fifth', 'Sixth'];
 </script>
 
 <div in:fade={{ delay: 100 }}>
