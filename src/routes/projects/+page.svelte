@@ -21,7 +21,11 @@
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div class="h-64 w-80 bg-white bg-opacity-10 rounded-lg cursor-none relative card" on:click={() => window.location.href="/projects/" + project.toLowerCase()}>
 			<div class="card-content bg-zinc-900 p-1">
-					{index} - {project}
+				<div class="flex h-full">
+					<div class="text-center m-auto">
+						{project}
+					</div>
+				</div>
 			</div>
 		</div>
 	{/each}
