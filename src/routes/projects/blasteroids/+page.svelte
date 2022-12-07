@@ -3,3 +3,13 @@
     <img src="/Blasteroids1.png" alt="Blasteroids" class="w-1/2">
     <img src="/Blasteroids2.png" alt="Blasteroids" class="w-1/2">
 </div>
+
+<p>
+    <span class="underline text-lg bold font-Menlo pt-10">How This Works:</span>
+
+</p>
+<p>
+    <span>
+        It uses C and allegro 5 to recreate the asteroids game
+    </span>
+</p>
