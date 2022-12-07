@@ -77,7 +77,7 @@
 				for fully settled. Fluent in English. Fast Learner. Very eager to work.
 			</p>
 		</div>
-		<div class="flex flex-row justify-center items-center pt-5">
+		<div class="flex flex-row justify-center items-center pt-5 pr-12 gap-10">
 			<a href="/contact">
 				<button
 					class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium group bg-gradient-to-br from-indigo-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-slate-200 focus:ring-4 focus:outline-none  focus:ring-fuchsia-800 hover:animate-pan"
