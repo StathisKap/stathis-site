@@ -9,7 +9,7 @@
 			<p class="font-Menlo inline-block">To:</p>
 			<code class="text-center text-lg inline-block underline mt-5">stathiskap75@gmail.com</code>
 		</div>
-		<div class="relative z-0 mt-5">
+		<div class="relative z-0 mt-5 cursor-none">
 			<input
 				type="text"
 				name="Name"
