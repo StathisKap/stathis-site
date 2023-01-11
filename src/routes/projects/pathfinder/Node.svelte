@@ -1,5 +1,11 @@
 <script lang="ts">
-	export let tileSize: number = 20;
+	import { onMount } from 'svelte';
+	export let tileSize:number;
+
+	onMount(async () => {
+		tileSize = 20;
+	});
+
 	enum nodeType {"unexplored", "start", "end", "explored", "shortestPath"};
 	let state = {	[nodeType.unexplored as number]: "bg-white",
 	 				[nodeType.start as number]: "bg-red-700",
