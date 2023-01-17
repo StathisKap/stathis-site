@@ -20,19 +20,18 @@
 		{#each projects as project, index}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<a href="/projects/{project.toLowerCase()}" class="flex">
-			<div class="h-64 w-80 bg-white bg-opacity-10 rounded-lg cursor-none relative card">
-				<div class="card-content bg-zinc-900 p-1">
-					<div class="flex h-full">
-						<div class="text-center m-auto">
-							{project}
+				<div class="h-64 w-80 bg-white bg-opacity-10 rounded-lg cursor-none relative card">
+					<div class="card-content bg-zinc-900 p-1">
+						<div class="flex h-full">
+							<div class="text-center m-auto">
+								{project}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</a>
+			</a>
 		{/each}
 	</div>
-
 </div>
 
 <style>

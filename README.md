@@ -1,4 +1,5 @@
 # stathis-site
+
 ### My personal site
 
 This is a site built with svelte, tailwindecss and compiled with vite, that talks abit about my skills, projects, and future ambitions. It's also a fun project for me to play around with svelte.

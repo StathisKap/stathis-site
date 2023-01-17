@@ -66,7 +66,7 @@
 
 {#if is_subtitle_done}
 	<div in:fade class="pt-12 text-lg">
-	<hr class="mt-12 mb-12" />
+		<hr class="mt-12 mb-12" />
 
 		<div class="flex flex-row">
 			<!--			<img src="/Crosswalk3.jpg"  alt="Stathis" class="flex w-1/2 h-1/2"> -->
@@ -101,7 +101,7 @@
 				</button>
 			</a>
 		</div>
-	
+
 		<hr class="mt-12 mb-12" />
 		<p class="text-xl text-slate-500 text-center">
 			Website is a work in progress. It is being developed with Svelte, Typescript, and Tailwind. It
