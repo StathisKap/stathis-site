@@ -1,10 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	export let tileSize:number;
-
-	onMount(async () => {
-		tileSize = 20;
-	});
 
 	enum nodeType {"unexplored", "start", "end", "explored", "shortestPath"};
 	let state = {	[nodeType.unexplored as number]: "bg-white",
@@ -18,7 +12,4 @@
 	$: nodeClass = state[nodeValue];
 </script>
 
-<div
-	class="border-black border-2
-	w-[{tileSize}px] h-[{tileSize}px]
-	{nodeClass}"/>
+<div class="border-black border-2 w-[20px] h-[20px] {nodeClass}"/>

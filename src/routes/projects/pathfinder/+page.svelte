@@ -12,11 +12,10 @@
     let topWidth:number;
     let topHeight:number;
 
-    let tileSize = 20;
     let tileGridWidth: number;
     let tileGridHeight: number;
-    $: tileGridWidth = Math.trunc((innerWidth - (innerWidth - topWidth)) / tileSize);
-    $: tileGridHeight = Math.trunc((innerHeight - topHeight) / tileSize) - 1;
+    $: tileGridWidth = Math.trunc((innerWidth - (innerWidth - topWidth)) / 20);
+    $: tileGridHeight = Math.trunc((innerHeight - topHeight) / 20) - 1;
 
     function buildNodes(rows:number, columns:number){
         const nodes: any[] = [];
@@ -64,7 +63,6 @@
     <p> Inner Height: {innerHeight} </p>
     <p> Top Bar Width:  {topWidth} </p>
     <p> Top Bar Height: {topHeight} </p>
-    <p> Tile Size: {tileSize} </p>
     <p> Tile Grid Height: {tileGridHeight} </p>
     <p> Tile Grid Width: {tileGridWidth} </p>
     <button type="button" class="border-2 border-red-500" on:click={() => setGraph(nodes)}>Set Graph</button>
@@ -75,7 +73,7 @@
 <div class="flex flex-wrap max-w-full">
     {#each nodes as row, rowIndex}
             {#each row as node, nodeIndex}
-                <Node tileSize={tileSize} nodeValue={nodes[rowIndex][nodeIndex]}/>
+                <Node nodeValue={nodes[rowIndex][nodeIndex]}/>
             {/each}
     {/each}
 </div>
