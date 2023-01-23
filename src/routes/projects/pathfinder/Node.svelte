@@ -21,7 +21,4 @@
 	$: nodeClass = state[nodeValue];
 </script>
 
-<div
-	class="border-black border-2 w-[20px] h-[20px]
-	{nodeClass}"
-/>
+<div class="border-black border-2 w-[20px] h-[20px] {nodeClass}"/>
