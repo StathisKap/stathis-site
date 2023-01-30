@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	enum nodeType {"unexplored", "start", "end", "explored", "shortestPath"};
-	let state = {	[nodeType.unexplored as number]: "bg-white",
+	let state = {	[nodeType.unexplored as number]: "bg-slate-200",
 	 				[nodeType.start as number]: "bg-red-700",
 					[nodeType.end as number]: "bg-yellow-500",
 					[nodeType.explored as number]: "bg-blue-300",
