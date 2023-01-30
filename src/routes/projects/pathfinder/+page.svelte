@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { afterUpdate } from 'svelte';
 	import { performDFS, setGraph, result } from './dfs';
 	import Node from './Node.svelte';
 
@@ -39,15 +38,9 @@
 	$: console.log(nodes.length);
 
 	function setStartAndEnd() {
-		nodes[0][0] = 1;
-		nodes[14][0] = 2;
+		nodes[4][10] = nodeType.start;
+		nodes[2][11] = nodeType.end;
 	}
-
-	// set the graph that the DFS will be performed on
-	//    setGraph(nodes);
-
-	// perform DFS starting from node 0
-	//    performDFS(0);
 
 	// subscribe to the result store to update the UI
 	$: result.subscribe((result) => {
@@ -75,11 +68,16 @@
 	<button type="button" class="border-2 border-red-500" on:click={() => setGraph(nodes)}
 		>Set Graph</button
 	>
-	<button type="button" class="border-2 border-red-500" on:click={() => performDFS(0)}
+	<button type="button" class="border-2 border-red-500" on:click={() => {
+        performDFS()
+        nodes = nodes}}
 		>Perform DFS</button
 	>
 	<button type="button" class="border-2 border-red-500" on:click={() => setStartAndEnd()}
 		>Set Start and End</button
+	>
+	<button type="button" class="border-2 border-red-500" on:click={() => {nodes = buildNodes(tileGridHeight, tileGridWidth);}}
+		>Reset</button
 	>
 </div>
 

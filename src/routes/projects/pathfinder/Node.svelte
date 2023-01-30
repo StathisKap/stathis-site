@@ -8,6 +8,7 @@
 		'explored',
 		'shortestPath'
 	}
+
 	let state = {
 		[nodeType.unexplored as number]: 'bg-slate-200',
 		[nodeType.start as number]: 'bg-red-700',
