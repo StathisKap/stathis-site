@@ -4,7 +4,8 @@
 	let links = {
 		'GH.svg': 'https://github.com/StathisKap',
 		'Youtube.svg': 'https://www.youtube.com/channel/UCWKcP-sabZ7XJpHVsqA1Ikg/videos',
-		'THM.svg': 'https://tryhackme.com/p/St.K'
+		'THM.svg': 'https://tryhackme.com/p/St.K',
+		'LinkedIn.svg': 'https://www.linkedin.com/in/stathis-kapnidis-1b6676138'
 	};
 </script>
 
