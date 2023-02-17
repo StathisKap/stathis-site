@@ -12,7 +12,7 @@ enum nodeType {
 let graph: number[][] = [];
 
 // the neighbours of our current node
-let neighbours: number[] = [];
+let neighbours: number[][] = [];
 
 // number of nodes in the graph
 let n_r: number; // rows
@@ -64,14 +64,14 @@ function dfs(Node: number[]) {
 				continue;
 			}
 			else {
-				neighbours = [Node[0] + i, Node[1] + j];
+				neighbours.push([Node[0] + i, Node[1] + j]);
 			}
 		}
-
-		if (graph[neighbours[0]][neighbours[1]] != nodeType.explored ||
-			graph[neighbours[0]][neighbours[1]] != nodeType.start)
-			dfs(neighbours);
 	}
+
+	if (graph[neighbours[0]][neighbours[1]] != nodeType.explored ||
+		graph[neighbours[0]][neighbours[1]] != nodeType.start)
+		dfs(neighbours);
 }
 
 export async function performDFS() {
