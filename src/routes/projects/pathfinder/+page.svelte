@@ -10,8 +10,15 @@
 		'shortestPath'
 	}
 
+<<<<<<< HEAD
 	let innerWidth = 0; // pathfinder width
 	let innerHeight = 0; // pathfinder height
+=======
+    let tileGridWidth: number;
+    let tileGridHeight: number;
+    $: tileGridWidth = Math.trunc((innerWidth - (innerWidth - topWidth)) / 20);
+    $: tileGridHeight = Math.trunc((innerHeight - topHeight) / 20) - 1;
+>>>>>>> main
 
 	let topWidth: number;
 	let topHeight: number;
@@ -58,6 +65,7 @@
 	</p>
 	<p class="bold text-center text-lg">WORK IN PROGRESS</p>
 
+<<<<<<< HEAD
 	<p>Inner Width: {innerWidth}</p>
 	<p>Inner Height: {innerHeight}</p>
 	<p>Top Bar Width: {topWidth}</p>
@@ -88,3 +96,23 @@
 		{/each}
 	{/each}
 </div>
+=======
+    <p> Inner Width: {innerWidth} </p>
+    <p> Inner Height: {innerHeight} </p>
+    <p> Top Bar Width:  {topWidth} </p>
+    <p> Top Bar Height: {topHeight} </p>
+    <p> Tile Grid Height: {tileGridHeight} </p>
+    <p> Tile Grid Width: {tileGridWidth} </p>
+    <button type="button" class="border-2 border-red-500" on:click={() => setGraph(nodes)}>Set Graph</button>
+    <button type="button" class="border-2 border-red-500" on:click={() => performDFS(0)}>Perform DFS</button>
+    <button type="button" class="border-2 border-red-500" on:click={() => setStartAndEnd()}>Set Start and End</button>
+</div>
+
+<div class="flex flex-wrap max-w-full">
+    {#each nodes as row, rowIndex}
+            {#each row as node, nodeIndex}
+                <Node nodeValue={nodes[rowIndex][nodeIndex]}/>
+            {/each}
+    {/each}
+</div>
+>>>>>>> main
