@@ -11,14 +11,15 @@ enum nodeType {
 // adjacency list representation of a graph
 let graph: number[][] = [];
 
+// the neighbours of our current node
+let neighbours: number[][] = [];
+
 // number of nodes in the graph
 let n_r: number; // rows
 let n_c: number; // columns 
 
 // The start Node
 let startNode: number[];
-
-let is_found: boolean = false;
 
 // Svelte store for the result of the DFS
 export const result = writable<number[]>([]);
@@ -44,9 +45,8 @@ function findStartNode(graph: number[][]) {
 
 function dfs(Node: number[]) {
 	// mark the current node as visited
-	if (graph[Node[0]][Node[1]] == nodeType.end || is_found == true) {
+	if (graph[Node[0]][Node[1]] == nodeType.end) {
 		console.log("Found It!!");
-		is_found = true;
 		return;
 	}
 
@@ -54,11 +54,11 @@ function dfs(Node: number[]) {
 		graph[Node[0]][Node[1]] = nodeType.explored;
 	}
 
-	let neighbours: number[][] = [];
+	//	result.update((current) => [...current, [start_r, start_c]]);
 
 	// visit all the unvisited neighbors of the current node
-	for (let i = -1; i <= 1; i++) {
-		for (let j = -1; j <= 1; j++) {
+	for (let i = -1; i < 1; i++) {
+		for (let j = -1; j < 1; j++) {
 			if (Node[0] + i < 0 || Node[1] + j < 0 ||
 				Node[0] + i > n_r || Node[1] + j > n_c) {
 				continue;
@@ -69,15 +69,10 @@ function dfs(Node: number[]) {
 		}
 	}
 
-	for (let i = 0; i < neighbours.length; i++) {
-		console.log(i);
-		if (graph[neighbours[i][0]][neighbours[i][1]] != nodeType.explored &&
-			graph[neighbours[i][0]][neighbours[i][1]] != nodeType.start)
-			dfs(neighbours[i]);
-	};
+	if (graph[neighbours[0]][neighbours[1]] != nodeType.explored ||
+		graph[neighbours[0]][neighbours[1]] != nodeType.start)
+		dfs(neighbours);
 }
-
-
 
 export async function performDFS() {
 	// reset the result and visited arrays
