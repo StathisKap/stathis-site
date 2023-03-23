@@ -47,13 +47,13 @@
     Garduino	
 </p>
 
-<div id="Images" class="flex flex-col gap-3 max-w-full w-auto justify-center items-center align-middle pb-7">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hn0Y_s4RmP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-	<img src="/Garduino1.png" alt="Garduino" class="w-[560px]" />
+<div id="Images" class="flex flex-col gap-3 justify-center items-center align-middle pb-7">
+    <iframe src="https://www.youtube.com/embed/Hn0Y_s4RmP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-[560px] h-[315px] lg:w-[1120px] lg:h-[630px]"></iframe>
+	<img src="/Garduino1.png" alt="Garduino" class="w-[560px] h-[315px] lg:w-[1120px] lg:h-[630px]" />
 <!--	<img src="/Garduino2.png" alt="Garduino" class="w-[560px]" /> -->
 </div>
 
-<p id="MD" class="prose text-inherit">
+<p id="MD" class="prose lg:max-w-none text-inherit">
 	<Markdown
 		source={markdownContent}
 		options={{

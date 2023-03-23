@@ -51,7 +51,7 @@
 	<img src="/Blasteroids2.png" alt="Blasteroids" class="w-1/2" />
 </div>
 
-<p id="MD" class="prose max-w-none text-inherit">
+<p id="MD" class="prose lg:max-w-none text-inherit">
 	<Markdown
 		source={markdownContent}
 		options={{
@@ -65,5 +65,7 @@
 		--tw-prose-headings: rgb(203 213 225);
 		--tw-prose-links: rgb(203 213 225);
 		--tw-prose-code: rgb(203 213 225);
+		--tw-prose-bold: rgb(203 213 225);
+		--tw-prose-quotes: rgb(203 213 225);
 	}
 </style>
