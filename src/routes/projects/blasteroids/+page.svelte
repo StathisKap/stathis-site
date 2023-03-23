@@ -42,7 +42,7 @@
 	<Loading/>
 {/if}
 <p
-	class="block text-center text-6xl lg:text-6xl sm:text-5xl font-extrabold uppercase underline from-sky-500 to-yellow-300 text-transparent bg-clip-text bg-gradient-to-r pb-10"
+	class="block text-center text-6xl xl:text-6xl sm:text-5xl font-extrabold uppercase underline from-sky-500 to-yellow-300 text-transparent bg-clip-text bg-gradient-to-r pb-10"
 >
 	Blasteroids
 </p>
@@ -50,8 +50,21 @@
 	<img src="/Blasteroids1.png" alt="Blasteroids" class="w-1/2" />
 	<img src="/Blasteroids2.png" alt="Blasteroids" class="w-1/2" />
 </div>
+<div class="flex flex-row justify-center items-center pt-5 pr-12 gap-10">
+	<a href='https://github.com/StathisKap/Blasteroids'>
+		<button
+			class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium group bg-gradient-to-br from-indigo-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-slate-200 focus:ring-4 focus:outline-none  focus:ring-fuchsia-800 hover:animate-pan"
+		>
+			<span
+				class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0"
+			>
+				GitHub Repo
+			</span>
+		</button>
+	</a>
+</div>
 
-<p id="MD" class="prose lg:max-w-none text-inherit">
+<p id="MD" class="prose xl:max-w-none text-inherit">
 	<Markdown
 		source={markdownContent}
 		options={{
