@@ -60,6 +60,10 @@
 			>Mechanical Engineering</span
 		>
 		<span in:fly={{ y: 40, duration: 1000, delay: 1375 }} class="inline-block">&nbsp/&nbsp</span>
+		<span in:fly={{ y: 40, duration: 1000, delay: 1500 }} class="inline-block"
+			>Machine Learning</span
+		>
+		<span in:fly={{ y: 40, duration: 1000, delay: 1375 }} class="inline-block">&nbsp/&nbsp</span>
 		<span in:fly={{ y: 40, duration: 1000, delay: 1500 }} class="inline-block">Robotics</span>
 	</div>
 {/if}
@@ -68,13 +72,23 @@
 	<div in:fade class="pt-12 text-lg">
 		<hr class="mt-12 mb-12" />
 
-		<div class="flex flex-row">
+		<div class="flex flex-col">
 			<!--			<img src="/Crosswalk3.jpg"  alt="Stathis" class="flex w-1/2 h-1/2"> -->
-			<p class="flex flex-1 p-5 text-center">
-				&nbsp; &nbsp Mechanical Engineering with Robotics Graduate from the University of Sussex
-				looking for an Engineering or Software Engineering Job. Preferably in London. I have the
-				right to work in the UK under the EUSS. I have Pre-settled Status, and am currently applying
-				for fully settled. Fluent in English. Fast Learner. Very eager to work.
+			<p class="p-10 text-justify block">
+				Hello, my name is Stathis Kapnidis, and I am a recent Mechanical Engineering with Robotics
+				graduate from the University of Sussex.
+				My passion for robotics and coding has led me to
+				pursue a career in Software or Data Engineering.
+				I am highly proficient in Linux, C, and
+				Python and possess a broad range of knowledge across various aspects of technology. I
+				recently completed a DFE software development bootcamp from QA and scored a perfect 10/10 on
+				the final project in August 2022. I am continually expanding my skillset through various
+				books and courses on coding. As a team player, I thrive on collaborating with others to
+				tackle complex problems and achieve common goals.
+				I am eagerly seeking opportunities to
+				contribute my technical expertise and work ethic to challenging projects. I am excited about
+				the prospect of joining a driven team and bringing my enthusiasm and dedication to solving
+				challenging and important problems.
 			</p>
 		</div>
 		<div class="flex flex-row justify-center items-center pt-5 pr-12 gap-10">
@@ -103,7 +117,7 @@
 		</div>
 
 		<hr class="mt-12 mb-12" />
-		<p class="text-xl text-slate-500 text-center">
+		<p class="text-xl text-slate-500 text-justify">
 			Website is a work in progress. It is being developed with Svelte, Typescript, and Tailwind. It
 			is hosted as a node server within an LXC container on the ProxMox Type 1 Hypervisor, running
 			on an old laptop in my house in Greece. The site is accessible through a cloudflare argos
