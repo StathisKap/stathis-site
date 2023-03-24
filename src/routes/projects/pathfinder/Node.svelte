@@ -17,6 +17,7 @@
 		[nodeType.shortestPath as number]: 'bg-green-500'
 	};
 	export let nodeValue: number = 0;
+	export const previousNode: [number, number] = [-1, -1];
 
 	let nodeClass: string;
 	$: nodeClass = state[nodeValue];
