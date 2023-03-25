@@ -41,12 +41,12 @@
 {#if load_content}
 	<div in:fly={{ y: -40, duration: 1500 }}>
 		<span
-			class="block font-mono text-center text-8xl lg:text-8xl sm:text-5xl font-extrabold uppercase pt-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-fuchsia-800 to-indigo-500 animate-pan"
+			class="block font-mono text-center text-8xl font-extrabold uppercase pt-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-fuchsia-800 to-indigo-500 animate-pan"
 			style="background-size:200%;">Stathis Kapnidis</span
 		>
 	</div>
 	<div
-		class="text-center text-xl lg:text-xl sm:text-lg whitespace-nowrap uppercase pt-6 font-Menlo"
+		class="text-center justify-center text-xl lg:text-xl sm:text-lg whitespace-nowrap uppercase pt-6 font-Menlo flex flex-wrap"
 	>
 		<span
 			in:fly={{ y: 40, duration: 1000, delay: 1000 }}
@@ -71,21 +71,17 @@
 {#if is_subtitle_done}
 	<div in:fade class="pt-12 text-lg">
 		<hr class="mt-12 mb-12" />
-
-		<div class="flex flex-col">
-			<!--			<img src="/Crosswalk3.jpg"  alt="Stathis" class="flex w-1/2 h-1/2"> -->
-			<p class="p-10 text-justify block">
+		<div class="flex flex-row">
+			<!--<img src="/Crosswalk.jpg"  alt="Stathis" class="flex w-1/2 h-1/2">-->
+			<p class="p-10 text-justify flex flex-1">
 				Hello, my name is Stathis Kapnidis, and I am a recent Mechanical Engineering with Robotics
-				graduate from the University of Sussex.
-				My passion for robotics and coding has led me to
-				pursue a career in Software or Data Engineering.
-				I am highly proficient in Linux, C, and
+				graduate from the University of Sussex. My passion for robotics and coding has led me to
+				pursue a career in Software or Data Engineering. I am highly proficient in Linux, C, and
 				Python and possess a broad range of knowledge across various aspects of technology. I
 				recently completed a DFE software development bootcamp from QA and scored a perfect 10/10 on
 				the final project in August 2022. I am continually expanding my skillset through various
 				books and courses on coding. As a team player, I thrive on collaborating with others to
-				tackle complex problems and achieve common goals.
-				I am eagerly seeking opportunities to
+				tackle complex problems and achieve common goals. I am eagerly seeking opportunities to
 				contribute my technical expertise and work ethic to challenging projects. I am excited about
 				the prospect of joining a driven team and bringing my enthusiasm and dedication to solving
 				challenging and important problems.
