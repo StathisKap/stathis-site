@@ -4,13 +4,20 @@
 	import { fade } from 'svelte/transition';
 	import Mouse_Circle from './Mouse_Circle.svelte';
 	import { onMount } from 'svelte';
-	import '../app.css';
 	import Menu from './Menu.svelte';
+	import '../app.css';
 
 	let isMenuOpen: boolean = false;
 	let is_mounted = false;
 	let screen_is_large = true;
-	let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	let isMobile = false;
+	if (typeof navigator !== 'undefined') {
+ 	   isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+ 	 }
+
+	function closeMenu() {
+		isMenuOpen = false;
+	}
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -58,11 +65,11 @@
 		<Menu isOpen={isMenuOpen} />
 	{/if}
 	{#if is_mounted}
-	{#if !isMobile}
-		<div in:fade={{ delay: 1000 }}>
-			<Mouse_Circle />
-		</div>
-	{/if}
+		{#if !isMobile}
+			<div in:fade={{ delay: 1000 }}>
+				<Mouse_Circle />
+			</div>
+		{/if}
 		<main
 			class="bg-zinc-900 flex-1 items-stretch min-h-screen text-slate-300 pl-10 pr-10 md:pt-5 lg:pt-5 xl:pt-5 2xl:pt-5 pt-16"
 		>

@@ -22,13 +22,14 @@
 				<span class="block w-8 h-0.5 bg-gray-100" />
 				<span class="block w-8 h-0.5 bg-gray-100" />
 			</div>
-			<div class="shadow-2xl">
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<div class="shadow-2xl" on:click={() => {isOpen = false}}>
 				<Logo />
 			</div>
 			<div class="flex flex-col flex-0.5 min-h-screen justify-center border-t-2 border-zinc-800">
 				<hr class="border-t-2 border-zinc-800" />
 				{#each pages as page}
-					<a href="/{page.toLowerCase()}">
+					<a href="/{page.toLowerCase()}" on:click={() => {isOpen = false}}>
 						<div class="border-b-2 border-zinc-800 hover:text-teal-300">
 							<div class="m-3 leading-8">
 								{page}
