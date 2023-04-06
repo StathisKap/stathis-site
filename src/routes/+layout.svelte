@@ -50,7 +50,7 @@
 			<Sidebar />
 		</div>
 	{:else}
-		<header class="flex justify-between items-center h-12 bg-stone-800 fixed inset-x-0 top-0">
+		<header class="flex justify-between items-center h-12 bg-stone-800 fixed inset-x-0 top-0 z-50">
 			<div class="h-16 w-32 pt-1">
 				<Logo />
 			</div>
