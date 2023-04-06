@@ -32,7 +32,7 @@
 				<td class="font-Menlo">whoami</td>
 			</Typewriter>
 			{#if is_blinking}
-				<td class="animate-blink">▐▌</td>
+				<td class="animate-blink">▋</td>
 			{/if}
 		</tr>
 	</table>

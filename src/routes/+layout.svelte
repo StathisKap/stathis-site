@@ -31,10 +31,11 @@
 		}
 	}
 	onMount(async () => {
-		is_mounted = true;
 	});
 
 	onMount(() => {
+		is_mounted = true;
+		handleResize()
 		window.addEventListener('resize', handleResize);
 	});
 </script>

@@ -40,12 +40,12 @@
 				<div class="h-40" />
 				<div class="flex self-center relative bottom-1/4">
 					{#each Object.entries(links) as [svg, link]}
-						<div class="pr-2">
+						<div class="pr-2 w-12 h-12 sm:w-16 sm:h-16 md:w-34 md:h-34">
 							<a href={link}>
 								<img
 									src="/{svg}"
 									alt={link}
-									class="w-full justify-center h-6 bg-slate-100 rounded-full shadow-2xl border-2 border-neutral-400 hover:border-teal-200 hover:bg-teal-200"
+									class="justify-center bg-slate-100 rounded-full shadow-2xl border-2 border-neutral-400 hover:border-teal-200 hover:bg-teal-200"
 								/>
 							</a>
 						</div>
