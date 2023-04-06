@@ -15,10 +15,6 @@
  	   isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
  	 }
 
-	function closeMenu() {
-		isMenuOpen = false;
-	}
-
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
