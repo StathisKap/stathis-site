@@ -40,7 +40,7 @@
 				<div class="h-40" />
 				<div class="flex self-center relative bottom-1/4">
 					{#each Object.entries(links) as [svg, link]}
-						<div class="pr-2 w-12 h-12 sm:w-16 sm:h-16 md:w-34 md:h-34">
+						<div class="pr-2 w-12 h-12">
 							<a href={link}>
 								<img
 									src="/{svg}"
