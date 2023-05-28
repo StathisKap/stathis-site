@@ -23,7 +23,7 @@
 				<span class="block w-8 h-0.5 bg-gray-100" />
 			</div>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div class="shadow-2xl" on:click={() => {isOpen = false}}>
+			<div class="shadow-2xl pt-10" on:click={() => {isOpen = false}}>
 				<Logo />
 			</div>
 			<div class="flex flex-col flex-0.5 min-h-screen justify-center border-t-2 border-zinc-800">
@@ -31,7 +31,7 @@
 				{#each pages as page}
 					<a href="/{page.toLowerCase()}" on:click={() => {isOpen = false}}>
 						<div class="border-b-2 border-zinc-800 hover:text-teal-300">
-							<div class="m-3 leading-8">
+							<div class="m-3 leading-8 capitalize text-xl">
 								{page}
 							</div>
 						</div>
@@ -45,7 +45,7 @@
 								<img
 									src="/{svg}"
 									alt={link}
-									class="justify-center bg-slate-100 rounded-full shadow-2xl border-2 border-neutral-400 hover:border-teal-200 hover:bg-teal-200"
+									class="justify-center bg-slate-100 rounded-full shadow-2xl border-2 border-neutral-400 hover:border-teal-200 hover:bg-teal-200 w-10 h-10"
 								/>
 							</a>
 						</div>

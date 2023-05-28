@@ -19,7 +19,7 @@
 	>
 		{#each projects as project, index}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<a href="/projects/{project.toLowerCase()}" class="flex">
+			<a href="/projects/{project.toLowerCase()}" data-sveltekit-preload-data="hover" class="flex">
 				<div class="h-64 w-80 bg-white bg-opacity-10 rounded-lg cursor-none relative card">
 					<div class="card-content bg-zinc-900 p-1">
 						<div class="flex h-full">

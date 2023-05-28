@@ -113,7 +113,7 @@
 		</div>
 
 		<hr class="mt-12 mb-12" />
-		<p class="text-xl text-slate-500 text-justify">
+		<p class="text-xl text-slate-500 text-justify pb-10">
 			Website is a work in progress. It is being developed with Svelte, Typescript, and Tailwind. It
 			is hosted as a node server within an LXC container on the ProxMox Type 1 Hypervisor, running
 			on an old laptop in my house in Greece. The site is accessible through a cloudflare argos

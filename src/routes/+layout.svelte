@@ -4,16 +4,13 @@
 	import { fade } from 'svelte/transition';
 	import Mouse_Circle from './Mouse_Circle.svelte';
 	import { onMount } from 'svelte';
-	import Menu from './Menu.svelte';
+	import Device from 'svelte-device-info'
 	import '../app.css';
+	import Menu from './Menu.svelte';
 
 	let isMenuOpen: boolean = false;
 	let is_mounted = false;
 	let screen_is_large = true;
-	let isMobile = false;
-	if (typeof navigator !== 'undefined') {
- 	   isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
- 	 }
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -26,13 +23,9 @@
 			screen_is_large = true;
 		}
 	}
-	onMount(async () => {
-	});
 
 	onMount(() => {
 		is_mounted = true;
-		handleResize()
-		window.addEventListener('resize', handleResize);
 	});
 </script>
 
@@ -42,12 +35,10 @@
 </svelte:head>
 
 <div class="flex">
-	{#if screen_is_large}
-		<div class="w-36 min-h-screen relative">
+		<div class="w-36 min-h-screen relative hidden sm:block">
 			<Sidebar />
 		</div>
-	{:else}
-		<header class="flex justify-between items-center h-12 bg-stone-800 fixed inset-x-0 top-0 z-50">
+		<header class="flex justify-between items-center h-12 bg-stone-800 fixed inset-x-0 top-0 z-50 sm:hidden">
 			<div class="h-16 w-32 pt-1">
 				<Logo />
 			</div>
@@ -60,9 +51,8 @@
 			</div>
 		</header>
 		<Menu isOpen={isMenuOpen} />
-	{/if}
 	{#if is_mounted}
-		{#if !isMobile}
+		{#if !Device.isPhone}
 			<div in:fade={{ delay: 1000 }}>
 				<Mouse_Circle />
 			</div>
