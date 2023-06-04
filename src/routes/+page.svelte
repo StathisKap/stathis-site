@@ -41,12 +41,12 @@
 {#if load_content}
 	<div in:fly={{ y: -40, duration: 1500 }}>
 		<span
-			class="block font-mono text-center text-8xl font-extrabold uppercase pt-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-fuchsia-800 to-indigo-500 animate-pan"
+			class="block font-mono text-center sm:text-8xl text-7xl font-extrabold uppercase pt-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-fuchsia-800 to-indigo-500 animate-pan"
 			style="background-size:200%;">Stathis Kapnidis</span
 		>
 	</div>
 	<div
-		class="text-center justify-center text-xl lg:text-xl sm:text-lg whitespace-nowrap uppercase pt-6 font-Menlo flex flex-wrap"
+		class="text-center justify-center text-lg sm:text-xl whitespace-nowrap uppercase pt-6 font-Menlo flex flex-wrap"
 	>
 		<span
 			in:fly={{ y: 40, duration: 1000, delay: 1000 }}
@@ -87,7 +87,7 @@
 				challenging and important problems.
 			</p>
 		</div>
-		<div class="flex flex-row justify-center items-center pt-5 pr-12 gap-10">
+		<div class="flex flex-row justify-center items-center pt-5 gap-10">
 			<a href="/contact">
 				<button
 					class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium group bg-gradient-to-br from-indigo-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-slate-200 focus:ring-4 focus:outline-none  focus:ring-fuchsia-800 hover:animate-pan"

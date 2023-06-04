@@ -38,13 +38,12 @@
 		<div class="w-36 min-h-screen relative hidden sm:block">
 			<Sidebar />
 		</div>
-		<header class="flex justify-between items-center h-12 bg-stone-800 fixed inset-x-0 top-0 z-50 sm:hidden">
-			<div class="h-16 w-32 pt-1">
+		<header class="flex justify-between items-center h-13 bg-stone-800 fixed inset-x-0 z-40 sm:hidden">
+			<div class="h-full w-32">
 				<Logo />
 			</div>
 			<div class="flex-grow-2" />
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div class="p-4 space-y-2 rounded shadow" on:click={toggleMenu}>
+			<div class="p-4 space-y-2 rounded shadow" on:click={toggleMenu} on:keydown={toggleMenu}>
 				<span class="block w-8 h-0.5 bg-gray-100" />
 				<span class="block w-8 h-0.5 bg-gray-100" />
 				<span class="block w-8 h-0.5 bg-gray-100" />
@@ -58,7 +57,7 @@
 			</div>
 		{/if}
 		<main
-			class="bg-zinc-900 flex-1 items-stretch min-h-screen text-slate-300 pl-10 pr-10 md:pt-5 lg:pt-5 xl:pt-5 2xl:pt-5 pt-16"
+			class="bg-zinc-900 flex-1 h-full w-full items-stretch min-h-screen text-slate-300 mx-3 sm:mx-10 sm:pt-5 pt-16"
 		>
 			<slot />
 		</main>

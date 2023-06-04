@@ -14,7 +14,7 @@
 </script>
 
 {#if isOpen}
-		<div class="flex flex-col top-0 left-0 h-full w-full bg-stone-900 m-0 shadow-2xl fixed z-10" in:fade={{duration: 250}} out:fade={{duration: 250}}>
+		<div class="flex flex-col top-0 left-0 h-full w-full bg-stone-900 m-0 shadow-2xl fixed z-50" in:fade={{duration: 250}} out:fade={{duration: 250}}>
 		<nav class="text-center text-slate-200 text-lg">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div class="p-4 space-y-2 rounded shadow right-0 fixed bg-gray-800" on:click={() => {isOpen = false}}>
@@ -23,7 +23,7 @@
 				<span class="block w-8 h-0.5 bg-gray-100" />
 			</div>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div class="shadow-2xl pt-10" on:click={() => {isOpen = false}}>
+			<div class="shadow-2xl pt-13 border-black border-8" on:click={() => {isOpen = false}}>
 				<Logo />
 			</div>
 			<div class="flex flex-col flex-0.5 min-h-screen justify-center border-t-2 border-zinc-800">
@@ -37,8 +37,7 @@
 						</div>
 					</a>
 				{/each}
-				<div class="h-40" />
-				<div class="flex self-center relative bottom-1/4">
+				<div class="flex self-center relative bottom-1/4 my-40">
 					{#each Object.entries(links) as [svg, link]}
 						<div class="pr-2 w-12 h-12">
 							<a href={link}>
