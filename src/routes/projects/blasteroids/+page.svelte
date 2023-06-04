@@ -49,10 +49,10 @@
 	<img src="/Blasteroids1.png" alt="Blasteroids" class="w-1/2" />
 	<img src="/Blasteroids2.png" alt="Blasteroids" class="w-1/2" />
 </div>
-<div class="flex flex-row justify-center items-center pt-5 pr-12 gap-10">
+<div class="flex flex-row justify-center items-center py-5 gap-10">
 	<a href="https://github.com/StathisKap/Blasteroids">
 		<button
-			class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium group bg-gradient-to-br from-indigo-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-slate-200 focus:ring-4 focus:outline-none  focus:ring-fuchsia-800 hover:animate-pan"
+			class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm font-medium group bg-gradient-to-br from-indigo-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-slate-200 focus:ring-4 focus:outline-none  focus:ring-fuchsia-800 hover:animate-pan"
 		>
 			<span
 				class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0"
