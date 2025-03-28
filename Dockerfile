@@ -1,5 +1,5 @@
-# Use a node image to build the project
-FROM node:latest as build
+# Use a specific node version for better reproducibility
+FROM node:20-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -7,8 +7,8 @@ WORKDIR /app
 # Install pnpm
 RUN npm install -g pnpm
 
-# Copy these ones
-COPY ./package.json ./pnpm-lock.yaml .
+# Copy package files
+COPY ./package.json ./pnpm-lock.yaml ./
 
 # Install dependencies
 RUN pnpm install
@@ -27,4 +27,3 @@ EXPOSE $PORT
 
 # Start the application
 CMD ["node", "build"]
-

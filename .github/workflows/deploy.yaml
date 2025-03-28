@@ -1,0 +1,59 @@
+name: Build, Test and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and push Docker image
+        id: docker_build
+        run: |
+          export DOCKER_BUILDKIT=1
+          docker build -t stathiskap/stathis-site:1.0 .
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push stathiskap/stathis-site:1.0
+
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Kubectl
+        run: |
+          curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+          chmod +x kubectl
+          sudo mv kubectl /usr/local/bin/
+
+      - name: Configure Kubeconfig
+        run: |
+          echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
+
+      - name: Deploy to Kubernetes
+        run: |
+          #!/bin/bash
+          set -e
+
+          export KUBECONFIG=kubeconfig.yaml
+          NAMESPACE="stathis-site"
+
+          DEPLOYMENT_EXISTS=$(kubectl get deployment stathis-site -n $NAMESPACE --ignore-not-found -o jsonpath='{.metadata.name}')
+
+          if [ -n "$DEPLOYMENT_EXISTS" ]; then
+            kubectl rollout restart deployment/stathis-site -n $NAMESPACE
+            echo "Deployment stathis-site restarted."
+          else
+            kubectl apply -f k3s/stathis-site/stathis-site-deployment.yaml -n stathis-site
+            echo "Deployment stathis-site not found, applying it now."
+          fi
