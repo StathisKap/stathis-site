@@ -46,8 +46,8 @@
 	Blasteroids
 </p>
 <div id="Images" class="flex gap-3 max-w-full w-auto justify-center items-center align-middle pb-7">
-	<img src="/Blasteroids1.png" alt="Blasteroids" class="w-1/2" />
-	<img src="/Blasteroids2.png" alt="Blasteroids" class="w-1/2" />
+	<img src="/Blasteroids1.avif" alt="Blasteroids" class="w-1/2" />
+	<img src="/Blasteroids2.avif" alt="Blasteroids" class="w-1/2" />
 </div>
 <div class="flex flex-row justify-center items-center py-5 gap-10">
 	<a href="https://github.com/StathisKap/Blasteroids">

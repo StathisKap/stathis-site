@@ -55,8 +55,7 @@
 		allowfullscreen
 		class="w-5/6 aspect-video"
 	/>
-	<img src="/Garduino1.png" alt="Garduino" class="w-5/6 aspect-video" />
-	<!--	<img src="/Garduino2.png" alt="Garduino" class="w-[560px]" /> -->
+	<img src="/Garduino1.avif" alt="Garduino" class="w-5/6 aspect-video" />
 </div>
 <div class="flex flex-row justify-center items-center py-5 gap-10">
 	<a href='https://github.com/StathisKap/Garduino'>

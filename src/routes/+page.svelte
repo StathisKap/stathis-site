@@ -71,7 +71,7 @@
   <div in:fade class="pt-12 text-lg container mx-auto max-w-6xl">
     <hr class="my-12" />
     <div class="py-5 flex flex-col sm:flex-row justify-center align-middle items-center">
-      <img src="/Crosswalk.jpg" alt="Stathis" class="flex w-full sm:w-1/2 px-5 mb-8 sm:mb-0" loading="eager">
+      <img src="/Crosswalk.avif" alt="Stathis" class="flex w-full sm:w-1/2 px-5 mb-8 sm:mb-0" loading="eager">
       <div class="px-10 flex place-self-stretch w-full sm:w-auto">
         <ul class="list-disc space-y-4">
           <li>
