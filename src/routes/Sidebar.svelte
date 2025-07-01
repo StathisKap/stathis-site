@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Logo from './Logo.svelte';
 	let pages: Array<string> = ['Projects', 'Contact'];
 	let links = {
 		'GH.svg': 'https://github.com/StathisKap',
@@ -18,7 +17,9 @@
         "
 	>
 		<div class="shadow-2xl">
-			<Logo />
+			<a href="/">
+				<img src="/Logo.svg" alt="Logo" class="object-contain bg-slate-100 hover:bg-teal-300" />
+			</a>
 		</div>
 		<div class="flex flex-col flex-0.5 min-h-screen justify-center border-t-2 border-zinc-800">
 			<hr class="border-t-2 border-zinc-800" />
