@@ -1,3 +1,8 @@
+<!--
+ *
+ *
+ *
+-->
 <script lang="ts">
 	let pages: Array<string> = ['Projects', 'Contact'];
 	let links = {
@@ -8,14 +13,14 @@
 	};
 </script>
 
+
+<!--
+ *
+ *
+ *
+-->
 <div class="flex flex-col fixed top-0 left-0 min-h-screen w-40 bg-stone-900 m-0 shadow-2xl">
-	<nav
-		class="
-        text-center
-      text-slate-200
-    	text-lg
-        "
-	>
+	<nav class="text-center text-slate-200 text-lg">
 		<div class="shadow-2xl">
 			<a href="/">
 				<img src="/Logo.svg" alt="Logo" class="object-contain bg-slate-100 hover:bg-teal-300" />

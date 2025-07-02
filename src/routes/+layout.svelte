@@ -39,6 +39,7 @@
 	});
 </script>
 
+
 <!--
  *
  *
@@ -50,6 +51,12 @@
 	<link rel="preload" as="image" href="/Crosswalk.avif" />
 </svelte:head>
 
+
+<!--
+ *
+ *
+ *
+-->
 <div class="flex">
 		<div class="w-36 min-h-screen relative hidden sm:block">
 			<Sidebar />

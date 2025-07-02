@@ -1,6 +1,23 @@
+<!--
+ *
+ *
+ *
+-->
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 
+	/**
+	 *
+	 *
+	 *
+	 */
+	export let isOpen: boolean = false;
+
+	/**
+	 *
+	 *
+	 *
+	 */
 	let pages: Array<string> = ['Projects', 'Contact'];
 	let links = {
 		'GH.svg': 'https://github.com/StathisKap',
@@ -8,10 +25,14 @@
 		'THM.svg': 'https://tryhackme.com/p/St.K',
 		'LinkedIn.svg': 'https://www.linkedin.com/in/stathis-kapnidis-1b6676138'
 	};
-
-	export let isOpen: boolean = false;
 </script>
 
+
+<!--
+ *
+ *
+ *
+-->
 {#if isOpen}
 	<div
 		class="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -22,7 +43,7 @@
 	></div>
 
 	<div
-		class="fixed top-0 right-0 h-full w-80 bg-stone-900 shadow-2xl z-50 flex flex-col"
+		class="fixed top-0 right-0 h-full w-80 bg-zinc-900 shadow-2xl z-50 flex flex-col"
 		in:fly={{x: 320, duration: 300}}
 		out:fly={{x: 320, duration: 300}}
 	>
@@ -39,7 +60,7 @@
 		<div class="flex flex-col h-full text-slate-200 pt-16">
 			<div class="px-6 pb-8 border-b-2 border-zinc-800">
 				<a href="/" on:click={() => {isOpen = false}}>
-					<img src="/Logo.svg" alt="Logo" class="w-full max-w-32 mx-auto bg-slate-100 hover:bg-teal-300 transition-colors" />
+					<img src="/Logo.svg" alt="Logo" class="w-full mx-auto bg-slate-100 hover:bg-teal-300 transition-colors shadow-2xl shadow-black" />
 				</a>
 			</div>
 
