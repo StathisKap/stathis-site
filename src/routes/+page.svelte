@@ -109,15 +109,10 @@
   <div
     class="text-center justify-center text-lg sm:text-xl whitespace-nowrap uppercase pt-6 font-Menlo flex flex-wrap w-full"
   >
-    <span
-      in:fly={{ y: 40, duration: 1000, delay: 1000 }}
-      class="inline-block"
-      on:introend={function () {
-        $is_subtitle_done = true;
-      }}>Software Dev</span
-    >
-    {#each subheadings as subheading}
-      <span in:fly={{ y: 40, duration: 1000, delay: 1125 }} class="inline-block">&nbsp/&nbsp</span>
+    {#each subheadings as subheading, index}
+      {#if index > 0}
+        <span in:fly={{ y: 40, duration: 1000, delay: 1125 }} class="inline-block">&nbsp/&nbsp</span>
+      {/if}
       <span in:fly={{ y: 40, duration: 1000, delay: 1250 }} class="inline-block" >{subheading}</span>
     {/each}
   </div>
