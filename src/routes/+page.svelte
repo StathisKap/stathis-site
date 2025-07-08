@@ -111,7 +111,9 @@
   >
     {#each subheadings as subheading, index}
       {#if index > 0}
-        <span in:fly={{ y: 40, duration: 1000, delay: 1125 }} class="inline-block">&nbsp/&nbsp</span>
+        <span in:fly={{ y: 40, duration: 1000, delay: 1125 }} class="inline-block"
+        on:introend={() => { $is_subtitle_done = true }}
+        >&nbsp/&nbsp</span>
       {/if}
       <span in:fly={{ y: 40, duration: 1000, delay: 1250 }} class="inline-block" >{subheading}</span>
     {/each}
